@@ -52,7 +52,8 @@ class HomePageState extends State<HomePage> {
           padding: const EdgeInsets.all(40.0),
           child: new Center(
               child: new Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               new Text(
                 "Hasil Perhitungan : $jum",
@@ -61,12 +62,18 @@ class HomePageState extends State<HomePage> {
               ),
               new TextField(
                 keyboardType: TextInputType.number,
-                decoration: new InputDecoration(hintText: "Input Pertama") ,
+                decoration: new InputDecoration(
+                    hintText: "Input Pertama",
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(6))),
                 controller: t1,
               ),
               new TextField(
                 keyboardType: TextInputType.number,
-                decoration: new InputDecoration(hintText: "Input Kedua"),
+                decoration: new InputDecoration(
+                    hintText: "Input Kedua",
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(6))),
                 controller: t2,
               ),
               new Padding(padding: const EdgeInsets.only(top: 20.0)),
