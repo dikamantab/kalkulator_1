@@ -49,7 +49,7 @@ class HomePageState extends State<HomePage> {
           title: new Text("Kalkulator"),
         ),
         body: new Container(
-          padding: const EdgeInsets.all(40.0),
+          padding: const EdgeInsets.all(40.60),
           child: new Center(
               child: new Column(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -64,6 +64,7 @@ class HomePageState extends State<HomePage> {
                 keyboardType: TextInputType.number,
                 decoration: new InputDecoration(
                     hintText: "Input Pertama",
+                    fillColor: Color.fromARGB(255, 171, 182, 221),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(6))),
                 controller: t1,
@@ -71,9 +72,10 @@ class HomePageState extends State<HomePage> {
               new TextField(
                 keyboardType: TextInputType.number,
                 decoration: new InputDecoration(
-                    hintText: "Input Kedua",
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(6))),
+                  hintText: "Input Kedua",
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(6)),
+                ),
                 controller: t2,
               ),
               new Padding(padding: const EdgeInsets.only(top: 20.0)),
@@ -81,14 +83,24 @@ class HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   new MaterialButton(
+                    height: 50,
+                    minWidth: 100,
                     child: new Text("x"),
-                    color: Colors.blue,
+                    color: Colors.blue.shade200,
                     onPressed: perkalian,
+                    splashColor: Colors.blueAccent,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0)),
                   ),
                   new MaterialButton(
+                    height: 50,
+                    minWidth: 100,
                     child: new Text("/"),
-                    color: Colors.blue,
+                    color: Colors.blue.shade200,
                     onPressed: pembagian,
+                    splashColor: Colors.blueAccent,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0)),
                   ),
                 ],
               ),
@@ -97,14 +109,24 @@ class HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   new MaterialButton(
+                    height: 50,
+                    minWidth: 100,
                     child: new Text("+"),
-                    color: Colors.blue,
+                    color: Colors.blue.shade200,
                     onPressed: penjumlahan,
+                    splashColor: Colors.blueAccent,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0)),
                   ),
                   new MaterialButton(
+                    height: 50,
+                    minWidth: 100,
                     child: new Text("-"),
-                    color: Colors.blue,
+                    color: Colors.blue.shade200,
                     onPressed: pengurangan,
+                    splashColor: Colors.blueAccent,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0)),
                   ),
                 ],
               ),
